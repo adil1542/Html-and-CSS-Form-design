@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        
+      }
+   
+      .container {
+        width: 100%;
+        padding: 20px;
+       
+      }
+      .container header {
+        font-size: x-large;
+        color: #0a0a0a;
+        font-weight: 500;
+        text-align: center;
+      }
+      .container .form {
+        margin-top: 20px;
+      }
+      .form .input-box {
+        width: 100%;
+        margin-top: 10px;
+      }
+      
+      .form :where(.input-box input, .select-box) {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: #181717;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 0 15px;
+        
+      }
+     
+      .form .column {
+        display: flex;
+        column-gap: 15px;
+      }
+      .form .pet-box {
+        margin-top: 20px;
+      }
+      .pet-box h3 {
+        color: #333;
+        font-size: 1rem;
+        font-weight: 400;
+        
+      }
+      .form :where(.pet-option, .pet) {
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+        flex-wrap: wrap;
+        
+      }
+      .form .pet {
+        column-gap: 5px;
+      }
+      .pet input {
+        accent-color: rgb(130, 106, 251);
+      }
+      .form :where(.pet input, .pet label) {
+        cursor: pointer;
+      }
+
+      .address :where(input, .select-box) {
+        margin-top: 15px;
+      }
+
+
+      .select-box select {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+        color: #707070;
+        font-size: 1rem;
+      }
+
+
+      .details p{
+        margin-top: 25px;
+      }
+      .details input{
+        margin-top: 10px;
+        width: 100%;
+        height: 70px;
+        outline: none;
+        border-radius: 20px;
+        border: 1px solid lightgrey;
+        
+
+      }
+
+
+      .form button {
+        height: 50px;
+        width: 100%;
+        color: #fff;
+        font-size: large;
+        font-weight: 400;
+        margin-top: 30px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: rgb(130, 106, 251);
+      }
+      .form button:hover {
+        background: rgb(88, 56, 250);
+      }
+      
+      @media screen and (max-width: 500px) {
+        .form .column {
+          flex-wrap: wrap;
+        }
+        .form :where(.pet-option, .pet) {
+          row-gap: 15px;
+        }
+      }
+    </style>
+
+
+      </head>
+      <body>
+        <section class="container">
+          <header>Pet Adoption Event Application Form</header>
+          <form  class="form">
+            <div class="input-box">
+              <label>Applicant's Name</label>
+              <div class="column">
+                <div class="input-box">
+                  <input
+                    type="text"
+                    placeholder="First"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <input type="text" placeholder="Last" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <label>Email Address</label>
+              <input type="text" placeholder="Enter email address" required />
+            </div>
+            <div class="input-box">
+                <label>Home Address</label>
+                <input type="text" placeholder="Street Address" required />
+              </div>
+              <div class="input-box">
+                
+                <input type="text" placeholder="Street Address line 2" required />
+              </div>
+
+            </div>
+            <div class="input-box address">
+                <div class="column">  
+                  <div class="select-box">
+                    <select>
+                      <option hidden>Romania</option>
+                      <option>2345</option>
+                      <option>7865</option>
+                    </select>
+                  </div>
+                  <input type="text" placeholder="City" required />
+                </div>
+                <div class="column">
+                  <input type="text" placeholder="Postal/Zip code" required />
+                  <input type="text" placeholder="Region" required />
+                </div>
+            </div>
+
+
+            <div  class="pet-box">
+              <h3>Type of Pets Intrested In</h3>
+              <div style="margin-top: 15px;" class="pet-option">
+                <div class="pet">
+                  <input type="radio" id="check-male" name="pet" />
+                  <label >Dog</label>
+                </div>
+                <div class="pet">
+                  <input type="radio" id="check-female" name="pet" />
+                  <label >Cat</label>
+                </div>
+                <div class="pet">
+                  <input type="radio" id="check-other" name="pet" />
+                  <label >Rabit</label>
+                </div>
+                <div class="pet">
+                    <input type="radio" id="check-other" name="pet" />
+                    <label >Parrot</label>
+                  </div>
+                  <div class="pet">
+                    <input type="radio" id="check-other" name="pet" />
+                    <label >Others<b>:</b></label>
+                  </div>
+              </div>
+            </div>
+
+            <div class="details">
+                <p>
+                    Current Pet Ownership Details
+                </p>
+                <input type="text" placeholder="">
+            </div>
+           
+            <button>Submit</button>
+          </form>
+        </section>
+      </body>
+    </html>
+
