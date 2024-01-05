@@ -27,6 +27,7 @@
       .nav {
         position: fixed;
         top: 0;
+        z-index: 999;
         left: 0;
         width: 100%;
         padding: 15px;
@@ -59,18 +60,36 @@
       .banner-card img {
         max-width: 100%;
         
+        
       }
       .banner-text {
-        bottom: 0%;
+        position: absolute;
+        bottom: 3rem;
+        left: 2rem;
+        letter-spacing: 4px;
         font-size: xx-large;
-        padding: 20px;
+        color: #6c6969;
+        
+
+      }
+      
+      @media screen and (max-width: 770px) {
+        .banner-text {
+          bottom: 2rem;
+          font-size: larger;
+          letter-spacing: 2px;
+        }
+      }
+      @media screen and (max-width: 580px) {
+        .banner-text {
+          bottom: 1rem;
+          left: 1rem;
+          letter-spacing: 2px;
+          font-size: medium;
+        }
       }
 
-      .about-catering {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 30px;
-      }
+     
 
       img {
         width: 100%;
@@ -84,6 +103,7 @@
         width: 80%;
         display: flex;
         margin: auto;
+        margin-top: 70px;
       }
 
       .img-box {
@@ -103,7 +123,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        letter-spacing: 2px;
+        text-align: justify;
+        font-size: larger;
       }
 
       @media screen and (max-width: 610px) {
@@ -191,6 +212,7 @@
         }
       }
 
+
       /*-----------------  CONTACT CODE*/
 
       .container{
@@ -198,14 +220,6 @@
         margin: 35px 10% 0px 10%;
 
       }
-
-
-      /*.container{
-        margin-left: 13%;
-        line-height: 5rem;
-        margin-top: 35px;
-        
-      }*/
       
       .container p {
         top: 10%;
@@ -277,16 +291,17 @@
       </ul>
     </nav>
 
-    <div  class="banner-card">
-      <img src="/zinger-berger.jpg" />
-      <div class="banner-text">
-       <!-- <h4  > Le Catering</h4>   -->
+    <div style="position: relative;"  class="banner-card" >
+      <img src="./zinger-berger.jpg" />
+      <div  class="banner-text">
+        <p> Le Catering </p> 
       </div>
     </div>
+   
 
     <div class="main-box">
       <div class="img-box">
-        <img src="/tablesetting2.jpg" />
+        <img src="./tablesetting2.jpg" />
       </div>
       <div class="text-box">
         <div style="padding: 2rem">
@@ -294,7 +309,7 @@
           <br />
           <p>Tradition since 1889</p>
           <br />
-          <p style="font-size: normal">
+          <p>
             The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor
             sit amet, consectetur adipiscing elit consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -304,7 +319,7 @@
             pariatur.We only use seasonal ingredients.
           </p>
           <br />
-          <p style="font-size: normal">
+          <p>
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum consectetur adipiscing
             elit, sed do eiusmod temporincididunt ut labore et dolore magna
@@ -329,26 +344,26 @@
         <p>
           Assortment of fresh baked fruit breads and muffins 5.50
         </p>
-        <br />
+        
         <h5>
           Honey Almond Granola with Fruits  
         </h5><br/>
-        <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br />
+        <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
         <h5>
           Belgian Waffle  
         </h5><br/>
-        <p>Vanilla flavored batter with malted flour 7.50</p> <br />
+        <p>Vanilla flavored batter with malted flour 7.50</p> 
         <h5>
           Scrambled eggs 
         </h5><br/>
-        <p>Scrambled eggs,red pepper and garlic, with green onions 7.50</p><br />
+        <p>Scrambled eggs,red pepper and garlic, with green onions 7.50</p>
          <h5>
           Blueberry Pancakes  
         </h5><br/>
         <p>With syrup, butter and lots of berries 8.50</p><br />
       </div>
       <div class="img-2">
-        <img src="/tablesetting.jpg" />
+        <img src="./tablesetting.jpg" />
       </div>
     </div><hr style="border: 1px solid rgb(237, 230, 230)" />
 
